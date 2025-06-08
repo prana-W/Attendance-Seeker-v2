@@ -2,7 +2,6 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 require('dotenv').config();
 
-// Using IIFE because it's cool!!
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -54,6 +53,16 @@ require('dotenv').config();
     }
  // Remove the last useless object
     jsonData.pop()
+    const extraInformation = {
+        user: process.env.USER_ID,
+        date: new Date().toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric'
+        }),
+        current_time: new Date().toLocaleTimeString()
+    }
+    jsonData.unshift(extraInformation)
 
     // Writes all the attendance data to a JSON file (asynchronously).
     fs.writeFile('./attendance.json', JSON.stringify(jsonData), (err) => {
