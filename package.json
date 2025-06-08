@@ -2,9 +2,9 @@
   "name": "attendance-seeker",
   "version": "2.0.0",
   "description": "Too lazy to add description. Just read the README.md file.",
-  "main": "index.js",
+  "main": "getAttendance.js",
   "scripts": {
-    "dev": "node index.js"
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "Pranaw Kumar",
@@ -12,6 +12,9 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.10",
     "puppeteer": "^24.10.0"
   }
 }
