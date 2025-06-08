@@ -1,0 +1,17 @@
+{
+  "name": "attendance-seeker",
+  "version": "2.0.0",
+  "description": "Too lazy to add description. Just read the README.md file.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "keywords": [],
+  "author": "Pranaw Kumar",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "puppeteer": "^24.10.0"
+  }
+}
